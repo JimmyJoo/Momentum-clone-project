@@ -3,6 +3,8 @@ import * as ani from './animation';
 import * as etc from './etc';
 import * as t from './todos';
 import * as set from './setting';
+import * as main from './main';
+import * as valid from './validation';
 
 let user = {};
 let forgotPwUser = {};
@@ -26,7 +28,6 @@ const checkEmailForm = email => {
   return !re.test(email);
 };
 
-// Email Validation(형식과 길이 둘다 확인)
 const checkEmail = $target => {
   const email = $target.value.trim();
   const $lengthMsg = $target.nextElementSibling;
@@ -36,7 +37,6 @@ const checkEmail = $target => {
   $target.classList.toggle('warning', checkEmailForm(email) || !email);
 };
 
-// Pw Validation(비밀번호 조건을 만족하는지 확인)
 const checkPwCondition = $target => {
   const pw = $target.value.trim();
   const numExp = /[0-9]/;
@@ -68,7 +68,6 @@ const checkPw = $target => {
   $formMsg.classList.toggle('msg-show', checkPwConditionResult(pw) && pw);
   $target.classList.toggle('warning', checkPwConditionResult(pw));
 };
-
 
 const checkConfirmPw = ($pw, $confirmPw) => {
   const pw = $pw.value.trim();
@@ -149,7 +148,7 @@ const login = async ($email, $pw) => {
   const pw = $pw.value.trim();
   try {
     const { data } = await axios.post('/users/login', { email, pw });
-    if (data) {
+    if (data) {      
       user = data;
       $loginMsg.classList.toggle('error', false);
       const $greetingName = document.querySelector('.greeting .name');
@@ -202,5 +201,5 @@ export {
   checkLengthZero, checkEmail, checkPw, resetPw,
   checkPwCondition, checkPwConditionResult, checkPwHintAnswer,
   checkEmailExists, checkConfirmPw, enableCreateAccount, enableLoginBtn,
-  enableNextBtn, createAccount, login, getUsers
+  enableNextBtn, createAccount, login, getUsers, user
 };
