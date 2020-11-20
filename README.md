@@ -3,14 +3,19 @@
 # Will
 2020년 4월 팀프로젝트에서 작업한 모멘텀입니다.
 
+<br />
 
 ## 프로젝트 팀명
 생존자들:15기 생존보고서
+
+<br />
 
 
 ## 프로젝트 조원
 PM: 주한슬
 생존자들: 장지연, 김태진
+
+<br />
 
 
 ## 프로젝트 목표
@@ -36,10 +41,12 @@ PM: 주한슬
 2. 날씨에 따른 배경화면 설정
 3. 토스트 알림
 
+<br />
 
 ## 사용 기술
 HTML, CSS, JavaScript(ES6+), ESLint, Babel, Webpack, Express, Axios, Github, Slack, Photoshop, Illustrator, trello
 
+<br />
 
 ## 코딩 컨벤션
 ### HTML
@@ -92,6 +99,8 @@ ESLint(Airbnb)
 HTML: <!-- 영문 -->
 CSS: /* 영문 */
 JS: // 영문
+
+<br />
 
 ## Copyrights
 Unauthorized copying of this file, via any medium is NOT strictly prohibited
